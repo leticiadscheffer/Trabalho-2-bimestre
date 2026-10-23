@@ -1,0 +1,356 @@
+body{
+    background-color: rgb(250, 161, 216);
+    color: azure;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-around;
+    height: 120px;
+    align-items: center
+}
+
+.pesquisar{
+    box-sizing: border-box;
+    width: 400px;
+    height: 50px;
+    padding: 0 25px;
+    border: 2px solid #ff69b4;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.pesquisar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.lupa {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+}
+
+.lupa img {
+    width: 24px;
+    height: 24px;
+}
+
+.login button {
+    box-sizing: border-box;
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff69b4;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: deeppink;
+}
+
+.menu {
+    background-color: #ff69b4;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    height: 50px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.filme {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px 60px;
+}
+
+.filme .texto {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4a0033;
+}
+
+.filme h2 {
+    margin-top: 0;
+    color: #4a0033;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: #ff69b4;
+    color: #4a0033;
+}
+
+.rodape a {
+    color: #4a0033;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+/* ===== PARTE 2: DESTAQUES ===== */
+.destaques {
+    padding: 20px 60px;
+    text-align: center;
+}
+
+.destaques h2 {
+    color: #4a0033;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    border: 2px solid #ff69b4;
+    border-radius: 20px;
+    padding: 25px 20px;
+    color: #4a0033;
+}
+
+.card .icone {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: deeppink;
+}
+
+.card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ===== PARTE 2: CHAMADA PARA AÇÃO ===== */
+.chamada {
+    background-color: #ff69b4;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 60px;
+    border-radius: 25px;
+}
+
+.chamada h2 {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.chamada p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4a0033;
+}
+
+.botao {
+    display: inline-block;
+    background-color: white;
+    color: deeppink;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+}
+
+.botao:hover {
+    background-color: #4a0033;
+    color: white;
+}
+
+/* ===== PARTE 3: LOCALIZAÇÃO ===== */
+.localizacao {
+    padding: 20px 60px;
+}
+
+.localizacao h2 {
+    text-align: center;
+    color: #4a0033;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.localizacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.mapa {
+    position: relative;
+    min-height: 250px;
+}
+
+.mapa img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: center 35%;
+    display: block;
+    border: 3px solid #ff69b4;
+    border-radius: 20px;
+}
+
+.endereco {
+    background-color: white;
+    border: 2px solid #ff69b4;
+    border-radius: 20px;
+    padding: 25px;
+    color: #4a0033;
+    line-height: 1.6;
+}
+
+.endereco h3 {
+    margin: 0 0 15px;
+    color: deeppink;
+    font-size: 22px;
+}
+
+.endereco p {
+    margin: 0 0 8px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .menu {
+        font-size: 14px;
+    }
+
+    .filme {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .filme .texto {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .filme h2 {
+        font-size: 22px;
+    }
+
+    .rodape {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Parte 2 */
+    .destaques {
+        padding: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .chamada {
+        margin: 0 20px;
+        padding: 30px 15px;
+    }
+
+    .chamada h2 {
+        font-size: 24px;
+    }
+
+    .chamada p {
+        font-size: 16px;
+    }
+
+    .botao {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    /* Parte 3 */
+    .localizacao {
+        padding: 20px;
+    }
+
+    .localizacao-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .localizacao h2 {
+        font-size: 24px;
+    }
+
+    .mapa {
+        height: 280px;
+    }
+
+    .endereco {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 80px;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .pesquisar,
+    .login {
+        display: none;
+    }
+}
